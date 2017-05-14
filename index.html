@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
           </button>
           <!-- Edit to insert your title above the map -->
-          <a class='navbar-brand' href='index.html'>Searchable Map Template v1.4 fusion-map-point</a>
+          <a class='navbar-brand' href='index.html'>LECO Searchable GIS Map Template v1.0</a>
         </div>
         <!-- Edit to change buttons in upper-right corner above map -->
         <div class="navbar-collapse collapse">
@@ -40,7 +40,7 @@
     <div class='container-fluid'>
       <div class='row'>
         <div class='col-md-4'>
-          <p>Search for Connecticut Public Schools 2014-15.</br>View <a href="http://github.com/jackdougherty/fusion-map-point">fusion-map-point code on GitHub</a>, based on <a href='http://derekeder.com'>Derek Eder's</a> <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> with Google <a href='http://support.google.com/fusiontables/answer/2571232?hl=en&ref_topic=1652595'>Fusion Tables</a>. See tutorial to build your own in Google Fusion Templates section of <a href="http://datavizforall.org">Data Visualization For All</a>.</p>
+          <p>Search for LECO GIS Database 2017.</br>View <a href="http://github.com/stjsrilanka/fusion-map-point">fusion-map-point code on GitHub</a>, based on <a href='http://derekeder.com'>Derek Eder's</a> <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> with Google <a href='http://support.google.com/fusiontables/answer/2571232?hl=en&ref_topic=1652595'>Fusion Tables</a>. See tutorial to build your own in Google Fusion Templates section of <a href="http://datavizforall.org">Data Visualization For All</a>.</p>
           <div class='well'>
             <h4>
               Address <small>(<a id='find_me' href='#'>find me</a>)</small>
@@ -53,10 +53,30 @@
                 within
                 <select id='search_radius'>
                   <!-- Edit to remove radius search choices from index.html. See more options in maps_lib.js -->
-                  <option value='400'>2 blocks</option>
-                  <option value='805'>1/2 mile</option>
-                  <option value='1610'>1 mile</option>
-                  <option value='3220'>2 miles</option>
+                  <option value='50'>50m</option>
+                  <option value='100'>100m</option>
+                  <option value='200'>200m</option>
+                  <option value='300'>300m</option>
+                  <option value='400'>400m</option>
+                  <option value='500'>500m</option>
+                  <option value='1000'>1km</option>
+                  <option value='2000'>2km</option>
+                  <option value='3000'>3km</option>
+                  <option value='4000'>4km</option>
+                  <option value='5000'>5km</option>
+                  <option value='6000'>6km</option>
+                  <option value='7000'>7km</option>
+                  <option value='8000'>8km</option>
+                  <option value='9000'>9km</option>
+                  <option value='10000'>10km</option>
+                  <option value='20000'>20km</option>
+                  <option value='30000'>30km</option>
+                  <option value='40000'>40km</option>
+                  <option value='50000'>50km</option>
+                  <option value='75000'>75km</option>
+                  <option value='100000'>100km</option> 
+                  <option value='125000'>125km</option>
+                  <option value='150000'>150km</option>                   
                 </select>
               </label>
             </p>
@@ -151,11 +171,11 @@
         // locationScope -- insert a major place name to limit Google Map searches to this area
         $(function() {
           var myMap = new MapsLib({
-            fusionTableId:      "1FMjVRb16OqlkeodL7onaQ5A7jamtpSY0TmHaa-WQ",
-            googleApiKey:       "AIzaSyDIevSvpV-ONb4Pf15VUtwyr_zZa7ccwq4",
-            locationColumn:     "Address",
-            map_center:         [41.76, -72.69],
-            locationScope:      "Connecticut"
+            fusionTableId:      "1Ip7lWZJo2HBkYFemKWyWDxYzwoCaTYEhg9NAeAQ0",
+            googleApiKey:       "AIzaSyAfu_XzbRVe_CLzxP9kuafzrPHcsqsr_yc",
+            locationColumn:     "Latitude",
+            map_center:         [6.727003, 79.957518],
+            locationScope:      "Sri Lanka"
           });
 
           var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
